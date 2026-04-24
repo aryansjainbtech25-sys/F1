@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>FORMULA 1 - TRACKS</title>
+  <link rel="icon" type="image/png" href="logo3.png" />
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .bg{
+      
+      cursor:pointer;
+      
+    }
+    body{
+      background-color: white;
+      background-image: url(trackbg.jpg);
+      
+      background-size: cover;
+      background-attachment: fixed;
+    }
+    .f1-btn{ top:15px; position: fixed;}
+
+    .container{
+      margin-left: 50px;margin-top: 40px;
+    }
+    @media(max-width:1600px){
+      #video{
+        left:630px;
+        top:30px;
+      }
+      
+    }
+
+    #data{position: fixed;left: 1590px; top: 770px;color: white;
+
+    }
+    
+
+  </style>
+</head>
+<body >
+  <nav>
+ 
+  <a href="drivers.html">
+  <button class="f1-btn" style="left:770px;">Teams</button>
+  </a>
+  
+  <a href="login.html">
+    <button class="f1-btn" style="left:1120px;">Login/Signup</button>
+  </a>
+  <a href="index.html">
+  <button class="f1-btn" style="right:10px;"><--BACK</button>
+  </a>
+    <a href="tyre.html">
+  <button class="f1-btn" style="left:1300px;">Tyres</button>
+  </a>
+  <a href="https://www.youtube.com/playlist?list=PLfoNZDHitwjUleAqrgG-OC5gVAL2mv-Mh" target="_blank">
+  <button class="f1-btn" style="left:900px;">2025 Race Highlights</button>
+  </a>
+
+  </nav>
+
+  
+  <video id="video" autoplay muted loop >
+    <source id="source" src="trackvid.webm" type="video/webm">
+  
+  </video>
+  
+  <a id="data" href=" https://en.wikipedia.org/wiki/List_of_Formula_One_circuits" >To know about more F1 tracks</a>
+  
+  
+   
+  <img  src="banner.jpg" alt="F1 Banner" class="banner">
+  <img  src="logo3.png" alt="F1 Logo" class="logo3">
+
+  <section>
+    <div class="container" style="margin-top: 100px;">
+      <img data-video="trackvid.webm" src="1.png" alt="Track 1" class="bg">
+      <div class="text-box">1: Circuit de Spa-Francorchamps - Belgium</div>
+    </div>
+
+    
+    <div class="container" >
+      <img data-video="track2.mp4" src="2.png" alt="Track 2" class="bg">
+      <div class="text-box">2: Monza Circuit - Italy</div>
+    </div>
+
+    
+    <div class="container" >
+      <img data-video="track3.mp4" src="3.png" alt="Track 3"class="bg">
+      <div class="text-box">3: Silverstone Circuit - United Kingdom</div>
+    </div>
+
+    
+    <div class="container">
+      <img data-video="track4.mp4" src="4.png" alt="Track 4" class="bg">
+      <div class="text-box">4: Suzuka Circuit - Japan</div>
+    </div>
+
+    
+    <div class="container" >
+      <img data-video="track5.mp4" src="5.png" class="bg"alt="Track 5">
+      <div class="text-box">5: Circuit de Monaco - Monaco</div>
+    </div>
+
+    
+    <div class="container" >
+      <img data-video="track6.mp4" src="6.png" class="bg"alt="Track 6">
+      <div class="text-box">6: Circuit Gilles Villeneuve - Canada</div>
+    </div>
+
+    
+    <div class="container" >
+      <img data-video="track7.mp4" src="7.png" class="bg"alt="Track 7">
+      <div class="text-box">7: Interlagos Circuit - Brazil</div>
+    </div>
+
+    
+    <div class="container">
+      <img data-video="track8.mp4" src="8.png"class="bg" alt="Track 8">
+      <div class="text-box">8: Hockenheimring - Germany</div>
+    </div>
+
+    
+    <div class="container" >
+      <img data-video="track9.mp4" src="9.png" class="bg"alt="Track 9">
+      <div class="text-box">9: Circuit of the Americas - USA</div>
+    </div>
+
+    
+    <div class="container" >
+      <img data-video="track10.mp4" src="10.png" class="bg"alt="Track 10">
+      <div class="text-box">10: Yas Marina Circuit - Abu Dhabi</div>
+    </div>
+    <br><br>
+  </section>
+  <script>
+    const images = document.getElementsByClassName("bg");
+    const videosource = document.getElementById("source");
+    const video  = document.getElementById("video");
+    for(let img2 of images){
+      img2.addEventListener("click",function(){
+        const newVideo = img2.getAttribute("data-video");
+        videosource.setAttribute("src",newVideo);
+        video.load();
+        video.play();
+      });
+    }
+    
+  </script>
+  
+
+  
+</body>
+</html>

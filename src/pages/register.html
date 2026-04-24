@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>FORMULA 1- REGISTER</title>
+  <link rel="icon" type="image/png" href="logo3.png" />
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    #line{width:300px;height: 910px;position: absolute;z-index: 1;background-color: black;right: 0px;box-shadow: -80px 0 100px 150px rgba(0,0,0,0.95), -60px 0 80px 100px rgba(0,0,0,0.95);}
+  
+    
+      
+    video {width:100%;position: fixed;height:auto;left: 5x;top: 8px;border-radius: 5px;}
+    
+    section{z-index: 1;position: fixed; left: 400px;top: 200px;}
+    
+    body{overflow-y: hidden;}
+
+    label{position: absolute; font-size: x-large;color:darkgray;white-space: nowrap;}
+
+    #username,#password,#finalpassword{position:absolute; width: 200px; height: 100; top:270px;  background:darkgray; padding:5px; border-radius:5px; background-color: black;}
+    
+    #submit{ right: 150px; top: 550px;font-size: large; border-radius: 5px;width: 200px;}
+    
+    @media(max-width:1600px){
+      section  { left: 10%;top :20%;}
+      #submit{left :110px;}
+      
+    }
+
+    </style>
+</head>
+<body>
+
+  <a href="index.html">
+  <button class="f1-btn" style="right:10px; top:15px;position: fixed;" ><--BACK</button>
+  </a>
+  
+  <h1 style="white-space: nowrap;">Create Account</h1>
+
+  
+
+ <div id="line"></div>
+
+  <div class="image-container" >
+  
+    <video autoplay muted loop >
+  <source src="Wallpaper F1 4K TEST EDIT AMD [zEsbZSRtM7E].webm" type="video/mp4">
+  
+  </video>
+  
+  <section >
+    
+    <label for="username" style="font-size:xx-large; top:30px; left:1110px;">Create Account:</label>
+    <form id="form">
+    <label for="username" style="top:100px; left:1110px;">Driver Name:</label>
+    <input type="text" id="username" name="username" placeholder="🙍 Enter username" 
+          style="top: 150px;left:1110px;" required>
+    
+    
+    <label for="password" style=" top:220px;left:1110px;">Password:</label>
+    <input type="text" id="password" name="password" placeholder="🔓 Enter password" 
+          style="top:270px; left:1110px;" required>
+    
+    <label for="password" style="left:1110px;top: 340px;">Confirm Password:</label>
+    <input type="text" id="finalpassword" name="password" placeholder="🔒 Enter final password" 
+          style="top:390px; left:1110px" required>
+          
+    <input type="checkbox" id="user-agreement" style="position:absolute; top:435px; left:1110px;" required>
+
+    <button onclick="fucntion()" class="f1-btn" style="left :1120px; top: 490px;font-size: large; border-radius: 5px;width: 200px;">Submit</button>
+    
+    
+    <label for="user-agreement" style="font-size: large; top:435px; left:1135px;">
+      Accept our user agreement
+    </label>
+    </form>
+  </section>
+  </div>
+  
+  
+  
+
+
+
+
+  
+  <img src="banner.jpg" alt="F1 Banner" class="banner">
+  <img src="logo3.png" alt="F1 Logo" class="logo3">
+
+  <script>
+  function fucntion(){
+  const password=document.getElementById("password").value;
+  const finalpassword=document.getElementById("finalpassword").value;
+  const username=document.getElementById("username").value;
+  const check = document.getElementById("user-agreement").checked;
+  
+  event.preventDefault();
+  if(!check){
+    alert("Please accept our user agreement to proceeded");
+    return false;
+
+  }
+  if(!username || !password ){
+    alert("There is error in username or password , please try again");
+  }
+  else if(password!==finalpassword){
+    alert("password and confirm password dont match please try again!");
+    return false;
+  }
+  else {
+    alert("You have officially registered in the best F1 fan website!");
+    return false;
+  }
+
+  }
+</script>
+  
+</body>
+</html>

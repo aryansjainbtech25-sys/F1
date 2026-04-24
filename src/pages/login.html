@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>FORMULA 1-LOGIN</title>
+  <link rel="icon" type="image/png" href="logo3.png" />
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    section form {left: 0px;padding: 30px;z-index: 3;
+    position: fixed; top: 180px; width: 300px;height: 500px;left: 1490px;border-radius: 15px;}
+
+    video {width:100%;position: fixed;height:auto;left: 5x;top: 8px;border-radius: 5px;}
+
+    #line{width:300px;height: 910px;position: absolute;z-index: 1;background-color: black;right: 0px;box-shadow: -80px 0 100px 150px rgba(0,0,0,0.95), -60px 0 80px 100px rgba(0,0,0,0.95);}
+
+    body{overflow-y: hidden;}
+
+    label{position: absolute; font-size: x-large;color:darkgray;}
+    
+    #username,#password{position:absolute; width: 200px; height: 100; top:270px;  background:darkgray; padding:5px; border-radius:5px; background-color: black;}
+    
+    .f1-btn{right:10px; top:15px;position: fixed;}
+    #submit{ right: 150px; top: 550px;font-size: large; border-radius: 5px;width: 200px;}
+    
+    @media(max-width:1600px){
+      section form { left: 80%;}
+      #submit{right :5%;}
+      
+      body{overflow-x:hidden ;}
+    }
+    
+
+
+  </style>
+</head>
+<body>
+ <nav>
+  <a href="index.html">
+  <button class="f1-btn" ><--BACK</button>
+  </a></nav>
+  
+  <h1 >Welcome Back</h1>
+
+  
+
+
+  <div class="video-container" >
+    <div id="line"></div>
+  
+    <video autoplay muted loop>
+      <source src="Full CGI aftermovie ｜｜ Formula 1 2022 [GErmjAnP6ug].webm" type="video/webm">
+  
+    </video>
+  </div>
+  <section >
+  
+  
+    <form >
+    <label  style="font-size:xx-large; top:30px;">Welcome Back:</label>
+    <a href="register.html" style="top: 450px; position: absolute; color: red; ">create a account</a>
+    
+    <label for="username" style="top:100px;  ">Driver Name:</label>
+    <input type="text" id="username" name="username" placeholder="🙍 Enter username"  
+          style="top: 150px;"  required>
+    
+    
+    <label for="password" style="top:220px;">Encryption Key:</label>
+    <input type="password" id="password" name="password" placeholder="🔒 Enter password" 
+          style="top:270px;" required>
+
+
+    <button class="f1-btn" id="submit" onclick="fucntion()" type="submit">Submit</button>
+    <input type="checkbox" id="user-agreement" style="position:absolute; top:320px; " required>
+    
+    <label for="user-agreement" style="top:320px; left:60px;font-size: large;">
+      Accept our user agreement
+      
+    </label>
+    </form>
+  
+  </section>
+
+
+
+  
+
+
+  
+  <img src="banner.jpg" alt="F1 Banner" class="banner">
+  <img src="logo3.png" alt="F1 Logo" class="logo3">
+  
+  
+</body>
+<script>
+  function fucntion(){
+  const password=document.getElementById("password").value;
+  const username=document.getElementById("username").value;
+  const check = document.getElementById("user-agreement").checked;
+  const correctun = "agni";
+  const correctpw = "0036";
+  event.preventDefault();
+  if(!check){
+    alert("Please accept our user agreement to proceeded");
+    return false;
+
+  }
+  if(username=== correctun && password === correctpw){
+    alert("The login was succesfull , you can proceed to go to home page");
+  }
+  else{
+    alert("There is error in username or password , please try again");
+    return false;
+  }
+
+  }
+</script>
+</html>
